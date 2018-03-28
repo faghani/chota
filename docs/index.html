@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <title>chota - A small CSS framework</title>
+  <title>chota - A micro CSS framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/chota">
   <link rel="stylesheet" href="./doc-styles.css">
@@ -18,7 +18,8 @@
     <div class="hero is-full-screen">
       <div class="logo is-center is-vertical-align">
         <img src="./logo.svg" alt="">
-        <h3>A <strong>small</strong> (3kb) CSS framework.</h3>
+        <h3>A <strong>micro</strong> (<3kb) CSS framework.</h3>
+        <small><em>BTW, "choṭā" means "small" in Hindi</em></small>
       </div>
       <nav class="tabs is-center">
         <a href="#features">features</a>
@@ -34,7 +35,7 @@
         <li>⚡️&nbsp; Super light-weight. Just 3kb (minified + gzipped).</li>
         <li>⛔️&nbsp; No preprocessor, just plug-n-play</li>
         <li>📐&nbsp; Magical 12 column <a href="#grid">grid</a></li>
-        <li>🌈&nbsp; Easy to <a href="#customizing">extended</a> with CSS variables</li>
+        <li>🌈&nbsp; Easy to <a href="#customizing">extend</a> with CSS variables</li>
         <li>🎲&nbsp; Comes with a handful of <a href="#components">components</a> &amp; <a href="#utilities">utilities</a></li>
         <li>✅&nbsp; Good Semantics</li>
       </ul>
@@ -68,9 +69,9 @@
       </header>
       <br>
       <p>
-        Chota is <em>dead</em> simple to use. It doesn't require learning a lot of class names like other frameworks. It applies a few basic styles to the HTML following the <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">HTML Semenatics</a>.
+        Chota is <em>dead</em> simple to use. It doesn't require learning a lot of class names like other frameworks. It applies a few basic styles to the HTML following the <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">HTML Semantics</a>.
       </p>
-      <p>Here is a <a href="https://cdn.rawgit.com/jenil/chota/359843a4/test/index.html">demo</a> of the basic HTML elements.</p>
+      <p>Here is a <a href="https://cdn.rawgit.com/jenil/chota/v0.4.1/test/index.html">demo</a> of the basic HTML elements.</p>
       <br>
       <h3 id="customizing">Customizing</h3>
       <p>Chota comes with a basic set of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank">CSS variables</a>:</p>
@@ -78,6 +79,7 @@
 :root {
   --primary-color: #1a9f60;
   --lightGrey-color: #ddd;
+  --darkGrey-color: #888;
   --grid-maxWidth: 120rem;
   --grid-gutter: 1.5rem;
   --font-family: "Helvetica Neue", sans-serif;
@@ -104,10 +106,11 @@
         <div class="col is-right">
           <nav class="tabs">
             <a href="#grid">grid</a>
-          <a href="#buttons">buttons</a>
-          <a href="#nav">nav</a>
-          <a href="#card">card</a>
-          <a href="#utilities">utilities</a>
+            <a href="#buttons">buttons</a>
+            <a href="#nav">nav</a>
+            <a href="#card">card</a>
+            <a href="#tag">tag</a>
+            <a href="#utilities">utilities</a>
           </nav>
         </div>
       </div>
@@ -119,15 +122,18 @@
       <br>
       {% include card.html %}
       <br>
+      {% include tag.html %}
+      <br>
       {% include utilities.html %}
       <br>
       <p class="is-center">
-      <a class="button primary outline" target="_blank" href="https://twitter.com/intent/tweet?url=https://jenil.github.io/chota/&text=chota.css%20-%20A%20small%20CSS%20framework&via=geekGogari&hashtags=web,css">Give a shout-out</a>
+      <a class="button primary outline" target="_blank" href="https://twitter.com/intent/tweet?url=https://jenil.github.io/chota/&text=chota.css%20-%20A%20micro%20CSS%20framework&via=geekGogari&hashtags=web,css">Give a shout-out</a>
       </p>
     </section>
   </div>
   <footer class="is-text-center">
     <p><a href="#top">back to top</a> &bull; <a href="https://github.com/jenil/chota">report an issue</a></p>
+    <p>Want icons for your project too? Checkout <a href="https://icongr.am" target="_blank">Icongr.am 🚀</a></p>
     <h5>Made by <a href="https://jgog.in" target="_blank">Jenil Gogari</a></h5>
   </footer>
   <script>
